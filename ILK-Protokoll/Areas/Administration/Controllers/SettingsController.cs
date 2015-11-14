@@ -20,7 +20,7 @@ namespace ILK_Protokoll.Areas.Administration.Controllers
 		public ActionResult Index()
 		{
 			var user = db.Users.Find(GetCurrentUserID());
-			return View(user.Settings);
+			return View(GetCurrentUser().Settings);
 		}
 
 		// POST: Administration/Settings

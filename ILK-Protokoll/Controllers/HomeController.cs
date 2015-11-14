@@ -13,7 +13,6 @@ namespace ILK_Protokoll.Controllers
 	///    Dies ist die Startseite, deren Index()-methode auch ohne Angabe des Controllers ausgelöst werden kann. ~/ verweist
 	///    also auf diese Index()-Methode.
 	/// </summary>
-	[Authorize]
 	public class HomeController : BaseController
 	{
 		// GET: Home/Index/

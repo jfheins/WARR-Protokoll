@@ -10,14 +10,7 @@
 		</div>
 		<div class="navbar-collapse collapse" id="primaryNavbarContent">
 			<p class="navbar-right navbar-text">
-				@{
-					var shortname = User.Identity.Name.Split('\\').Last();
-					if (shortname.Length > 3)
-					{
-						shortname = shortname.Substring(shortname.Length - 3);
-					}
-				}
-				<span class="hidden-xs usertile">@shortname</span>
+				<span class="hidden-xs usertile">@ViewBag.CurrentUser.ShortName</span>
 			</p>
 
 			@using (Html.BeginForm("Results", "Search", new {Area = ""}, FormMethod.Get, new {@class = "navbar-form navbar-right"}))

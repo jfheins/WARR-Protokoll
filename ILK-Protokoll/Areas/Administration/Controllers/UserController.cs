@@ -207,6 +207,26 @@ namespace ILK_Protokoll.Areas.Administration.Controllers
 		}
 
 		/// <summary>
+		///    Erzeugt einen neuen Benutzer in der Datenbank anhand eines Names.
+		/// </summary>
+		public static User CreateUserFromUsername(DataContext db, string name)
+		{
+			var user = db.Users.SingleOrDefault(u => u.ShortName == name);
+			if (user == null)
+			{
+				user = db.Users.Add(new User(name, Guid.NewGuid())
+				{
+					LongName = "Anonymous User " + DateTime.Now.Second,
+					EmailAddress = "anonym@warr.de",
+					IsActive = true
+				});
+				db.SaveChanges();
+			}
+
+			return user;
+		}
+
+		/// <summary>
 		///    Erzeugt einen neuen Benutzer in der Datenbank anhand eines UserPrincipal. Alle Daten des Benutzers werden aus dem AD
 		///    gezogen, außerdem bekommt der neue Benutzer eine Willkommens-E-Mail
 		/// </summary>
