@@ -141,9 +141,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ILK-Protokoll\ILK_Protokoll.csproj">
+    <ProjectReference Include="..\ILK-Protokoll\WARR_Protokoll.csproj">
       <Project>{47303BBB-F108-46C4-8003-D51AEAA312C7}</Project>
-      <Name>ILK_Protokoll</Name>
+      <Name>WARR_Protokoll</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

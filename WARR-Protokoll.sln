@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILK_Protokoll", "ILK-Protokoll\ILK_Protokoll.csproj", "{47303BBB-F108-46C4-8003-D51AEAA312C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WARR_Protokoll", "ILK-Protokoll\WARR_Protokoll.csproj", "{47303BBB-F108-46C4-8003-D51AEAA312C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILK_Protokoll.Tests", "ILK_Protokoll.Tests\ILK_Protokoll.Tests.csproj", "{21F2320D-2593-415A-9DC1-7D3A43889005}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WARR_Protokoll.Tests", "ILK_Protokoll.Tests\WARR_Protokoll.Tests.csproj", "{21F2320D-2593-415A-9DC1-7D3A43889005}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
