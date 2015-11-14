@@ -10,7 +10,7 @@ namespace ILK_Protokoll.Models
 {
 	public class SessionReport
 	{
-		public const string Directory = @"C:\ILK-Protokoll_Reports\";
+		public const string Directory = @"C:\WARR-Protokoll_Reports\";
 
 		public SessionReport()
 		{

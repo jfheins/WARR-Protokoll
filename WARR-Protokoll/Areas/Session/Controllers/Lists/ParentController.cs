@@ -212,7 +212,7 @@ namespace ILK_Protokoll.Areas.Session.Controllers.Lists
 			evt.Location = location;
 			evt.IsAllDay = allDayEvent;
 			evt.UID = eventId;
-			evt.Organizer = new Organizer {CommonName = "ILK-Protokoll", Value = new Uri("mailto:no-reply@iwb.tum.de")};
+			evt.Organizer = new Organizer {CommonName = "WARR-Protokoll", Value = new Uri("mailto:no-reply@warr.de")};
 			evt.Alarms.Add(new Alarm
 			{
 				Duration = new TimeSpan(0, 15, 0),

@@ -49,12 +49,12 @@ namespace ILK_Protokoll.Controllers
 
 		private static string Serverpath
 		{
-			get { return @"C:\ILK-Protokoll_Uploads\"; }
+			get { return @"C:\WARR-Protokoll_Uploads\"; }
 		}
 
 		private static string TemporaryServerpath
 		{
-			get { return @"C:\ILK-Protokoll_Temp\"; }
+			get { return @"C:\WARR-Protokoll_Temp\"; }
 		}
 
 #if DEBUG
