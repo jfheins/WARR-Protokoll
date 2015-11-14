@@ -165,6 +165,6 @@ $RECYCLE.BIN/
 # Mac desktop service store files
 .DS_Store
 /cov-int
-ILK-Protokoll/doc/html/
-ILK-Protokoll/doc/ILK_Protokoll.xml
-ILK-Protokoll/Views/Home/About.cshtml
+WARR-Protokoll/doc/html/
+WARR-Protokoll/doc/WARR_Protokoll.xml
+WARR-Protokoll/Views/Home/About.cshtml
