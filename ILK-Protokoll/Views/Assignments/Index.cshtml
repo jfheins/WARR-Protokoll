@@ -11,42 +11,42 @@
 		<h4 class="panel-title">Filter</h4>
 	</div>
 	<div class="panel-body">
-		@using (Html.BeginForm("Index", "Assignments", FormMethod.Get))
+		@using (Html.BeginForm("Index", "Assignments", FormMethod.Get, new { @class = "form-inline" }))
 		{
 			<div class="form-inline">
 				<div class="col-sm-3">
 					<div class="row">
 						<div class="form-group">
-							@Html.EditorFor(model => model.ShowToDos)
-							@Html.LabelFor(model => model.ShowToDos)
+							@Html.EditorFor(model => model.ShowToDos, new { htmlAttributes = new { @class = "form-control" } })
+							@Html.LabelFor(model => model.ShowToDos, new { @class = "control-label" })
 						</div>
 					</div>
 					<div class="row">
 						<div class="form-group">
-							@Html.EditorFor(model => model.ShowDuties)
-							@Html.LabelFor(model => model.ShowDuties)
-						</div>
-					</div>
-				</div>
-				<div class="col-sm-3">
-					<div class="row">
-						<div class="form-group">
-							@Html.EditorFor(model => model.ShowPast)
-							@Html.LabelFor(model => model.ShowPast)
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group">
-							@Html.EditorFor(model => model.ShowFuture)
-							@Html.LabelFor(model => model.ShowFuture)
+							@Html.EditorFor(model => model.ShowDuties, new { htmlAttributes = new { @class = "form-control" } })
+							@Html.LabelFor(model => model.ShowDuties, new { @class = "control-label" })
 						</div>
 					</div>
 				</div>
 				<div class="col-sm-3">
 					<div class="row">
 						<div class="form-group">
-							@Html.EditorFor(model => model.ShowDone)
-							@Html.LabelFor(model => model.ShowDone)
+							@Html.EditorFor(model => model.ShowPast, new { htmlAttributes = new { @class = "form-control" } })
+							@Html.LabelFor(model => model.ShowPast, new { @class = "control-label" })
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							@Html.EditorFor(model => model.ShowFuture, new { htmlAttributes = new { @class = "form-control" } })
+							@Html.LabelFor(model => model.ShowFuture, new { @class = "control-label" })
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-3">
+					<div class="row">
+						<div class="form-group">
+							@Html.EditorFor(model => model.ShowDone, new { htmlAttributes = new { @class = "form-control" } })
+							@Html.LabelFor(model => model.ShowDone, new { @class = "control-label" })
 						</div>
 					</div>
 					<div class="row">

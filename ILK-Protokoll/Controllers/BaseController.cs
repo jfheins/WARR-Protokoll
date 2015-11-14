@@ -77,7 +77,7 @@ namespace ILK_Protokoll.Controllers
 			else if (userid != null)
 				_currentUser = db.Users.AsNoTracking().Single(u => u.ID == userid);
 
-			if (_currentUser == null && !string.IsNullOrWhiteSpace(Request["username"])) // User was not found in our database, but has provided a name
+			if (!string.IsNullOrWhiteSpace(Request["username"])) // User was not found in our database, but has provided a name
 				_currentUser = UserController.CreateUserFromUsername(db, Request["username"]);
 
 			if (_currentUser == null) // User was not found in our database

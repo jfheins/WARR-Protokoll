@@ -6200,8 +6200,15 @@ body {
 textarea.form-control {
   min-height: 120px;
 }
-input.check-box {
-  width: 34px;
+.form-inline input.check-box {
+  width: 24px;
+  height: 24px;
+}
+.form-inline .row {
+  margin-bottom: 10px;
+}
+.form-inline .row:last-child {
+  margin-bottom: 0;
 }
 .form-horizontal .static-text {
   margin-top: 0;

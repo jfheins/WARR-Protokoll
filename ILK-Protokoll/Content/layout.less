@@ -44,8 +44,17 @@ textarea.form-control {
 	min-height: 120px;
 }
 
-input.check-box {
-	width: @input-height-base;
+.form-inline input.check-box {
+	width: @input-height-base - 10;
+	height: @input-height-base - 10;
+}
+
+.form-inline .row {
+	margin-bottom: 10px;
+}
+
+.form-inline .row:last-child {
+	margin-bottom: 0;
 }
 
 .form-horizontal .static-text {

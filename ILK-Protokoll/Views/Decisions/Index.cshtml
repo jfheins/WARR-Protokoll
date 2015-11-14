@@ -19,57 +19,55 @@
 		<h4 class="panel-title">Filter</h4>
 	</div>
 	<div class="panel-body">
-		@using (Html.BeginForm("Index", "Decisions", FormMethod.Get))
+		@using (Html.BeginForm("Index", "Decisions", FormMethod.Get, new { @class = "form-inline" }))
 		{
-			<div class="form-inline">
-				<div class="col-sm-2">
-					<div class="row">
-						<div class="form-group">
-							@Html.EditorFor(model => model.ShowClosed)
-							@Html.LabelFor(model => model.ShowClosed)
-						</div>
-					</div>
-					<div class="row">
-						<div class="form-group">
-							@Html.EditorFor(model => model.ShowResolution)
-							@Html.LabelFor(model => model.ShowResolution)
-						</div>
+			<div class="col-sm-2">
+				<div class="row">
+					<div class="form-group">
+						@Html.EditorFor(model => model.ShowClosed, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.LabelFor(model => model.ShowClosed, new { @class = "control-label" })
 					</div>
 				</div>
-				<div class="col-sm-3">
-					<div class="row">
-						<div class="form-group">
-							@Html.DropDownListFor(model => model.Timespan, Model.TimespanChoices, new {@class = "form-control", id = "DecisionFilterDropdown"})
-						</div>
+				<div class="row">
+					<div class="form-group">
+						@Html.EditorFor(model => model.ShowResolution, new { htmlAttributes = new { @class = "form-control" } })
+						@Html.LabelFor(model => model.ShowResolution, new { @class = "control-label" })
 					</div>
 				</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="row">
+					<div class="form-group">
+						@Html.DropDownListFor(model => model.Timespan, Model.TimespanChoices, new { @class = "form-control", id = "DecisionFilterDropdown" })
+					</div>
+				</div>
+			</div>
 
-				<div class="col-sm-4 form-horizontal">
-					<div id="TimeWindowSelector" style="@divstyle">
-						<div class="row">
-							<div class="form-group">
-								@Html.LabelFor(model => model.WindowStartDate, new {@class = "control-label", style = "width:60px;"})
-								@Html.EditorFor(model => model.WindowStartDate, new {htmlAttributes = new {@class = "form-control"}})
-							</div>
+			<div class="col-sm-4 form-horizontal">
+				<div id="TimeWindowSelector" style="@divstyle">
+					<div class="row">
+						<div class="form-group">
+							@Html.LabelFor(model => model.WindowStartDate, new { style = "width:40px;" })
+							@Html.EditorFor(model => model.WindowStartDate, new { htmlAttributes = new { @class = "form-control" } })
 						</div>
-						<div class="row">
-							<div class="form-group">
-								@Html.LabelFor(model => model.WindowEndDate, new {@class = "control-label", style = "width:60px;"})
-								@Html.EditorFor(model => model.WindowEndDate, new {htmlAttributes = new {@class = "form-control"}})
-							</div>
+					</div>
+					<div class="row">
+						<div class="form-group">
+							@Html.LabelFor(model => model.WindowEndDate, new { style = "width:40px;" })
+							@Html.EditorFor(model => model.WindowEndDate, new { htmlAttributes = new { @class = "form-control" } })
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-3">
-					<div class="row">
-						<div class="form-group">
-							@Html.EditorFor(model => model.Searchterm, new {htmlAttributes = new {@class = "form-control", placeholder = "Suchbegriff"}})
-						</div>
+			</div>
+			<div class="col-sm-3">
+				<div class="row">
+					<div class="form-group">
+						@Html.EditorFor(model => model.Searchterm, new { htmlAttributes = new { @class = "form-control", placeholder = "Suchbegriff" } })
 					</div>
-					<div class="row">
-						<div class="form-group">
-							<input type="submit" value="Filtern" class="btn btn-primary" />
-						</div>
+				</div>
+				<div class="row">
+					<div class="form-group">
+						<input type="submit" value="Filtern" class="btn btn-primary" />
 					</div>
 				</div>
 			</div>
@@ -80,7 +78,7 @@
 @using (Html.Delayed(null, "Decisions_Toggle"))
 {
 	<script type="text/javascript">
-		$("#DecisionFilterDropdown").on("change", function() {
+		$("#DecisionFilterDropdown").on("change", function () {
 			if (this.value == -1) {
 				$("#TimeWindowSelector").show("fade", 400);
 			} else {

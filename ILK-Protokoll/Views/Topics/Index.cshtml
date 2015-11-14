@@ -19,7 +19,7 @@
 				<div class="row">
 					<div class="form-group">
 						@Html.EditorFor(model => model.ShowReadonly, new {htmlAttributes = new {@class = "form-control"}})
-						@Html.LabelFor(model => model.ShowReadonly)
+						@Html.LabelFor(model => model.ShowReadonly, new { @class = "control-label" })
 					</div>
 				</div>
 				<div class="row">
