@@ -131,7 +131,7 @@ namespace ILK_Protokoll.Areas.Session.Controllers
 			}
 			catch (Exception ex)
 			{
-				return HTTPStatus(HttpStatusCode.InternalServerError, "Fehler beim Versenden der E-Mails: " + ex.Message);
+				// return HTTPStatus(HttpStatusCode.InternalServerError, "Fehler beim Versenden der E-Mails: " + ex.Message);
 			}
 
 			foreach (var t in topics)
